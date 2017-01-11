@@ -5,3 +5,4 @@ yum install epel-release
 yum install mc telnet
 yum install wget net-tools
 yum install bind-utils
+yum install rdiff-backup rsync
