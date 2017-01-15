@@ -3,7 +3,7 @@
 
 if [ -z $1  ]
 then
-echo "Usage for create web user: sh www-user.sh domain.name.without.www"
+echo "Usage for create web user: sh add-www-user.sh domain.name.without.www"
 else
     if ! [ -d /var/www/$1 ]
     then
