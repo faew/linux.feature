@@ -13,6 +13,7 @@ else
     chown -R $1:$1 /var/www/$1
     chmod 750 /var/www/$1/htdocs
     chmod 750 /var/www/$1/tmp
+    chcon -R -t httpd_var_run_t /var/www/$1/tmp
     echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     else
