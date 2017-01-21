@@ -1,7 +1,7 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-yum install zlib-devel openssl-devel sqlite-devel bzip2-devel
+sh 06-install-devel.sh
 
 cd /tmp
 wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz

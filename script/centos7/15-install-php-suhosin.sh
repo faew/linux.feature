@@ -1,6 +1,8 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
+sh 06-install-devel.sh
+
 cd /tmp
 wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
 tar -xvzf ./suhosin-0.9.38.tar.gz

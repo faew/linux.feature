@@ -2,4 +2,4 @@
 # Licensed under the Apache License, Version 2.0
 
 yum groupinstall "Development Tools"
-yum install zlib-devel
+yum install zlib-devel openssl-devel sqlite-devel bzip2-devel
