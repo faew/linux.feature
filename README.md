@@ -2,9 +2,12 @@
 
 Manage you server with small shell scripts.
 
-How to start ?
+## How to start ?
 
-yum install git mc
-cd /root
-git clone https://github.com/faew/linux.feature.git
-mc
+### Install CentOS 7 Core (minimal edition)
+
+    yum install git mc
+    cd /root
+    git clone https://github.com/faew/linux.feature.git
+    mc
+
