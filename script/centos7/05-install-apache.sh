@@ -11,3 +11,6 @@ systemctl enable httpd
 systemctl start httpd
 
 setsebool -P httpd_can_sendmail on
+
+sh add-www-user.sh empty.local
+
