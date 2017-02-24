@@ -2,5 +2,6 @@
 # Licensed under the Apache License, Version 2.0
 
 yum update
+yum install selinux-policy-targeted
 sed -i "s/SELINUX=disabled/SELINUX=enforcing/g" /etc/selinux/config
 reboot
