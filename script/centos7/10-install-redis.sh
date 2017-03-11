@@ -6,3 +6,4 @@ systemctl start redis
 systemctl enable redis
 echo "Configuration: /etc/redis.conf"
 
+semanage port -m -t http_port_t -p tcp 6379
