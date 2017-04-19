@@ -5,11 +5,8 @@ rpm -i http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
 yum install mysql-server
 systemctl enable mysqld
 
-# disable only_full_group_by
-echo "sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'" >> /etc/my.cnf
-
-# make full utf8
-echo "init_connect='SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci'" >> /etc/my.cnf
+# make full utf8 and set sql_mode
+echo "init_connect=\"SET NAMES 'utf8mb4';SET collation_connection = 'utf8_unicode_ci';SET sql_mode='NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';\"" >> /etc/my.cnf
 
 systemctl start mysqld
 cat /var/log/mysqld.log | grep "password is generated"
