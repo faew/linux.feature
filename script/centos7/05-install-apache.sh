@@ -9,7 +9,7 @@ sed -i "s/#LoadModule/LoadModule/g" /etc/httpd/conf.modules.d/00-mpm-itk.conf
 wget -O /etc/httpd/conf.modules.d/10-vhost.conf https://raw.githubusercontent.com/faew/linux.feature/master/conf/centos7/apache24/10-vhost.conf
 
 echo "<Directory \"/var/www\">" > /etc/httpd/conf.d/allowoverride.conf
-echo "    AllowOverride All" >> /etc/httpd/conf.d/allowoverride.conf
+echo "AllowOverride All" >> /etc/httpd/conf.d/allowoverride.conf
 echo "</Directory>" >> /etc/httpd/conf.d/allowoverride.conf
 
 systemctl enable httpd
