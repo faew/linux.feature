@@ -3,11 +3,11 @@
 
 # Warning: Install the databases before you compile
 
-sh 06-install-devel.sh
-
-yum install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
-yum install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
-yum install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel libtool-ltdl-devel
+yum -y groupinstall "Development Tools"
+yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
+yum -y install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
+yum -y install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
+yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel libtool-ltdl-devel
 
 cd /tmp
 wget -O php-5.3.29.tar.gz http://php.net/get/php-5.3.29.tar.gz/from/this/mirror

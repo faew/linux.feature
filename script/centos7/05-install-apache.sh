@@ -1,7 +1,9 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-yum install httpd httpd-itk
+if [ "`systemctl is-active httpd`" != "active" ]
+then
+yum -y install httpd httpd-itk php
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --reload
 sed -i "s/Listen 80/Listen 0.0.0.0:80/g" /etc/httpd/conf/httpd.conf
@@ -19,4 +21,7 @@ setsebool -P httpd_can_sendmail on
 setsebool -P httpd_can_network_connect on
 
 sh add-www-user.sh empty.local
+else
+echo "Warning: httpd already install"
+fi
 

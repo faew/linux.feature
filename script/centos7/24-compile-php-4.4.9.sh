@@ -4,11 +4,11 @@
 # Warning: Install the databases before you compile
 # Warning: No options '--enable-dom' '--with-dom-xslt' '--with-dom-exslt' '--with-openssl'
 
-sh 06-install-devel.sh
-
-yum install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
-yum install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
-yum install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel
+yum -y groupinstall "Development Tools"
+yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
+yum -y install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
+yum -y install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
+yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel
 
 cd /tmp
 wget http://museum.php.net/php4/php-4.4.9.tar.gz

@@ -4,11 +4,11 @@
 # Warning: Install the databases before you compile
 # Warning: delete /tmp/php-5.1.6 if exist
 
-sh 06-install-devel.sh
-
-yum install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
-yum install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
-yum install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel
+yum -y groupinstall "Development Tools"
+yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
+yum -y install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-devel libpng-devel libmcrypt-devel
+yum -y install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
+yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel
 
 yum install autoconf213
 export PHP_AUTOCONF=/usr/bin/autoconf-2.13

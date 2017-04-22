@@ -1,8 +1,6 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-sh 06-install-devel.sh
-
 cd /tmp
 wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz
 tar -xvzf Python-3.5.3.tgz

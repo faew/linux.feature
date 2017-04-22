@@ -1,7 +1,6 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-sh 06-install-devel.sh
 
 cd /tmp
 wget https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.bz2

@@ -2,6 +2,6 @@
 # Licensed under the Apache License, Version 2.0
 
 systemctl start firewalld
-firewall-cmd --zone=public --change-interface=eth0
+firewall-cmd --zone=public --change-interface=`basename -a /sys/class/net/* | grep -v lo | tail -n 1`
 firewall-cmd --reload
 systemctl enable firewalld

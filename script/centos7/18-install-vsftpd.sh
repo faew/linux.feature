@@ -1,7 +1,7 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-yum install vsftpd
+yum -y install vsftpd
 sed -i "s/anonymous_enable=YES/anonymous_enable=NO/g" /etc/vsftpd/vsftpd.conf
 sed -i "s/#chroot_local_user=YES/chroot_local_user=YES/g" /etc/vsftpd/vsftpd.conf
 sed -i "s/listen=NO/listen=YES/g" /etc/vsftpd/vsftpd.conf
