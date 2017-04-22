@@ -14,6 +14,7 @@ else
     chmod 750 /var/www/$1/htdocs
     chmod 750 /var/www/$1/tmp
     chcon -R -t httpd_var_run_t /var/www/$1/tmp
+    chcon -R -t httpd_sys_rw_content_t /var/www/$1/htdocs
     echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     else
