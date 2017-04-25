@@ -8,3 +8,5 @@ sed -i "s/expose_php = On/expose_php = Off/g" /etc/php.ini
 sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 20M/g" /etc/php.ini
 sed -i "s/post_max_size = 8M/post_max_size = 20M/g" /etc/php.ini
 sed -i "s/;date.timezone =/date.timezone = UTC/g" /etc/php.ini
+
+systemctl restart httpd
