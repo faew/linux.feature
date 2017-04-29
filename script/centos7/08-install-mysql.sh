@@ -17,7 +17,7 @@ systemctl start mysqld
 
 MYSQL=`pwgen -y 12 1`
 
-echo -n $MYSQL > /root/mysql-pwd
+echo -n $MYSQL > /etc/linux.feature/mysql-pwd
 
 mysql --connect-expired-password -u root -p`cat /var/log/mysqld.log | grep "password is generated" | tail -n 1 | awk {'print $NF'}` <<_EOF_
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL';

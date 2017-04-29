@@ -14,7 +14,7 @@ firewall-cmd --zone=public --permanent --add-port=15672/tcp
 firewall-cmd --reload
 
 RPASS=`pwgen 12 1`
-echo -n $RPASS > /root/rabbitmq-pwd
+echo -n $RPASS > /etc/linux.feature/rabbitmq-pwd
 
 rabbitmqctl change_password guest $RPASS
 echo "Admin Url http://host:15672"
