@@ -2,7 +2,7 @@
 # Licensed under the Apache License, Version 2.0
 
 sqluser="root"
-sqlpass="root_mysql_password"
+sqlpass=`cat /etc/linux.feature/mysql-pwd`
 backup_dir="/backup/mysql"
 cdate=`date +%F`
 tdaydir="$backup_dir/$cdate"
