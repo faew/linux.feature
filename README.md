@@ -11,3 +11,4 @@ Manage you server with small shell scripts.
     git clone https://github.com/faew/linux.feature.git
     mc
 
+more information http://linux.feature.su/     
