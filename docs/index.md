@@ -6,6 +6,7 @@ layout: default
 * Minimalism
 * One script = One task
 * Do not disable OS security!
+* No control panel = No security problems
 
 ## [](#header-3)Step by step for CentOS 7
 * Install core edition CentOS 7 
