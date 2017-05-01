@@ -8,7 +8,7 @@ yum -y install mysql-server
 systemctl enable mysqld
 
 # make full utf8 and set sql_mode
-echo "init_connect=\"SET NAMES 'utf8mb4';SET collation_connection = 'utf8_unicode_ci';SET sql_mode='NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';\"" >> /etc/my.cnf
+echo "init_connect=\"SET NAMES 'utf8mb4';SET collation_connection = 'utf8mb4_unicode_ci';SET sql_mode='NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';\"" >> /etc/my.cnf
 echo "max_allowed_packet = 50M" >> /etc/my.cnf
 echo "innodb_buffer_pool_size = 128M" >> /etc/my.cnf
 echo "max_connections = 100" >> /etc/my.cnf
