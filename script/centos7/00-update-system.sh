@@ -3,5 +3,10 @@
 
 yum -y update
 yum -y install selinux-policy-targeted
+
+yum -y install audit audit-libs
+systemctl enable auditd
+systemctl start auditd
+
 sed -i "s/SELINUX=disabled/SELINUX=enforcing/g" /etc/selinux/config
 reboot
