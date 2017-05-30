@@ -10,6 +10,7 @@ yum -y install rdiff-backup rsync
 yum -y install policycoreutils-python setools
 yum -y install pwgen
 yum -y install supervisor
+yum -y install unzip
 
 mkdir /etc/linux.feature
 chmod 600 /etc/linux.feature
