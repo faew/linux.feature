@@ -12,3 +12,6 @@ chcon -t virtd_lxc_exec_t /usr/bin/systemd-nspawn
 # disable network-veth
 cp /usr/lib/systemd/system/{systemd-nspawn@,systemd-nspawn-online@}.service
 sed -i "s/--network-veth //" /usr/lib/systemd/system/systemd-nspawn-online@.service
+
+# autostart machines
+systemctl enable machines.target
