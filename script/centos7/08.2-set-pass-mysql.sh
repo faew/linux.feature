@@ -1,7 +1,7 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-MYSQL=`pwgen -y 12 1`
+MYSQL=$1
 
 echo -n $MYSQL > /etc/linux.feature/mysql-pwd
 
