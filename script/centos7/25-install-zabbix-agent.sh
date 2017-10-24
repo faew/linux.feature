@@ -2,13 +2,16 @@
 # Licensed under the Apache License, Version 2.0
 
 cd /tmp
-wget http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-agent-3.2.4-2.el7.x86_64.rpm
-rpm -i zabbix-agent-3.2.4-2.el7.x86_64.rpm
+wget http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-agent-3.4.3-1.el7.x86_64.rpm
+rpm -i zabbix-agent-3.4.3-1.el7.x86_64.rpm
 systemctl enable zabbix-agent
-systemctl start zabbix-agent
-cd /var/log/audit
-cat /var/log/audit/audit.log | grep zabbix_agentd | grep denied | audit2allow -M zabbix_agent_setrlimit
-semodule -i zabbix_agent_setrlimit.pp
 setsebool -P zabbix_can_network=1
-systemctl restart zabbix-agent
+systemctl start zabbix-agent
 echo "Config: /etc/zabbix/zabbix_agentd.conf"
+
+# if use spec port
+# semanage port -a -t zabbix_port_t -p tcp 10501
+
+# open agent port
+# firewall-cmd --permanent --zone=public --add-port=10050/tcp
+# firewall-cmd --reload
