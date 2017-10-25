@@ -1,15 +1,16 @@
 # Copyright © 2017 Feature.su. All rights reserved. 
 # Licensed under the Apache License, Version 2.0  
 
-# Warning: Install the databases before you compile 
+# Warning: Install the databases and new icu-lib before you compile 
 
 yum -y groupinstall "Development Tools"
+yum -y install httpd-devel
 yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
 yum -y install aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel re2c recode-devel lhttpd-devel libxslt-devel mhash-devel ImageMagick-devel
 
 cd /tmp
-wget -O php-7.1.8.tar.gz http://php.net/get/php-7.1.8.tar.gz/from/this/mirror
-tar -xvzf ./php-7.1.8.tar.gz
+wget -O php-7.1.10.tar.gz http://php.net/get/php-7.1.10.tar.gz/from/this/mirror
+tar -xvzf ./php-7.1.10.tar.gz
 cd php-7.1.8
 cd ext
 wget https://pecl.php.net/get/imagick-3.4.3.tgz
@@ -32,5 +33,7 @@ sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 20M/g" /usr/local/php71
 sed -i "s/post_max_size = 8M/post_max_size = 20M/g" /usr/local/php71/etc/php.ini 
 sed -i "s/;date.timezone =/date.timezone = UTC/g" /usr/local/php71/etc/php.ini 
 
-setsebool -P httpd_execmem on
+sed -i "s/7/5/g" /etc/httpd/conf.modules.d/10-php.conf
+systemctl restart httpd
 
+setsebool -P httpd_execmem on
