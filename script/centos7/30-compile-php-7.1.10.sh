@@ -11,7 +11,7 @@ yum -y install aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel li
 cd /tmp
 wget -O php-7.1.10.tar.gz http://php.net/get/php-7.1.10.tar.gz/from/this/mirror
 tar -xvzf ./php-7.1.10.tar.gz
-cd php-7.1.8
+cd php-7.1.10
 cd ext
 wget https://pecl.php.net/get/imagick-3.4.3.tgz
 tar -xvzf ./imagick-3.4.3.tgz
