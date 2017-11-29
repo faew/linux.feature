@@ -11,6 +11,7 @@ yum -y install policycoreutils-python setools
 yum -y install pwgen
 yum -y install supervisor
 yum -y install unzip
+yum -y install yum-utils
 
 mkdir /etc/linux.feature
 chmod 600 /etc/linux.feature
