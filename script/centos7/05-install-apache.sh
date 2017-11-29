@@ -20,6 +20,12 @@ systemctl start httpd
 setsebool -P httpd_can_sendmail on
 setsebool -P httpd_can_network_connect on
 
+cd /var/log/audit
+wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/httpd_dac.te
+checkmodule -M -m -o httpd_dac.mod httpd_dac.te
+semodule_package -o httpd_dac.pp -m httpd_dac.mod
+semodule -i httpd_dac.pp
+
 sh add-www-user.sh empty.local
 else
 echo "Warning: httpd already install"
