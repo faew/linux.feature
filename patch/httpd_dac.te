@@ -1,0 +1,9 @@
+module httpd_dac 1.0;
+
+require {
+type httpd_t;
+class capability dac_read_search;
+}
+
+#============= httpd_t ==============
+allow httpd_t self:capability dac_read_search;
