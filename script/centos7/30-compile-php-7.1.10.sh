@@ -33,7 +33,7 @@ sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 20M/g" /usr/local/php71
 sed -i "s/post_max_size = 8M/post_max_size = 20M/g" /usr/local/php71/etc/php.ini 
 sed -i "s/;date.timezone =/date.timezone = UTC/g" /usr/local/php71/etc/php.ini 
 
-sed -i "s/7/5/g" /etc/httpd/conf.modules.d/10-php.conf
+sed -i "s/5/7/g" /etc/httpd/conf.modules.d/10-php.conf
 systemctl restart httpd
 
 setsebool -P httpd_execmem on
