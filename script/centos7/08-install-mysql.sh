@@ -4,7 +4,7 @@
 if [ "`systemctl is-active mysqld`" != "active" ]
 then
 rpm -i http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-yum -y install mysql-server
+yum -y install mysql-server mysql-community-libs-compat
 systemctl enable mysqld
 
 # make full utf8 and set sql_mode
