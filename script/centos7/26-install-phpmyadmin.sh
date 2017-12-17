@@ -1,7 +1,7 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-cd /var/www/empty.local/htdocs/
+cd /var/www/empty.local/html/web/
 wget https://files.phpmyadmin.net/phpMyAdmin/4.4.15.10/phpMyAdmin-4.4.15.10-english.tar.gz
 tar -xvzf ./phpMyAdmin-4.4.15.10-english.tar.gz
 rm -f phpMyAdmin-4.4.15.10-english.tar.gz
