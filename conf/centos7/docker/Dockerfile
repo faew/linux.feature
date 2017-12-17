@@ -3,6 +3,7 @@
 
 # docker build --rm --no-cache -t linux.feature/lamp .
 # docker run --privileged -d -p 2222:22 -p 8080:80 linux.feature/lamp
+# docker update --restart=unless-stopped <container>
 
 # login via ssh, change root password
 # run post-load-docker.sh
