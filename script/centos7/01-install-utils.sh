@@ -12,6 +12,7 @@ yum -y install pwgen
 yum -y install supervisor
 yum -y install unzip
 yum -y install yum-utils
+yum -y install aspell-en
 
 mkdir /etc/linux.feature
 chmod 600 /etc/linux.feature
