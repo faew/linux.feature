@@ -5,7 +5,7 @@ if [ -z $1  ]
 then
 echo "Usage install poweradmin: sh 29-install-poweradmin.sh main_domain_for_dns"
 else
-cd /var/www/empty.local/htdocs
+cd /var/www/empty.local/html/web
 wget https://github.com/poweradmin/poweradmin/archive/master.zip
 unzip master.zip
 rm -f master.zip
