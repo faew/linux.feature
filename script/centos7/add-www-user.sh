@@ -8,13 +8,13 @@ else
     if ! [ -d /var/www/$1 ]
     then
     useradd -d /var/www/$1 $1
-    mkdir -p /var/www/$1/htdocs
+    mkdir -p /var/www/$1/html/web
     mkdir -p /var/www/$1/tmp
     chown -R $1:$1 /var/www/$1
     chmod 750 /var/www/$1/htdocs
     chmod 750 /var/www/$1/tmp
     chcon -R -t httpd_var_run_t /var/www/$1/tmp
-    chcon -R -t httpd_sys_rw_content_t /var/www/$1/htdocs
+    chcon -R -t httpd_sys_rw_content_t /var/www/$1/html
     echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     else
