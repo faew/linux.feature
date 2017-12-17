@@ -22,7 +22,7 @@ setsebool -P httpd_can_network_connect on
 
 sh add-www-user.sh empty.local
 
-cd /var/log/audit
+cd /tmp
 wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/httpd_dac.te
 checkmodule -M -m -o httpd_dac.mod httpd_dac.te
 semodule_package -o httpd_dac.pp -m httpd_dac.mod
