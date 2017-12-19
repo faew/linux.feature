@@ -3,7 +3,7 @@
 
 yum -y install epel-release
 yum -y install psmisc
-yum -y install mc telnet
+yum -y install mc telnet nano
 yum -y install wget net-tools
 yum -y install bind-utils
 yum -y install rdiff-backup rsync
