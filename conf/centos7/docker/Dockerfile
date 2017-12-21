@@ -24,6 +24,7 @@ RUN cd /root/linux.feature/script/centos7/; sh 30-compile-icu.sh; exit 0
 RUN cd /root/linux.feature/script/centos7/; sh 30-compile-php-7.1.sh; exit 0
 RUN cd /root/linux.feature/script/centos7/; sh 35-install-crond.sh; exit 0
 RUN cd /root/linux.feature/script/centos7/; sh 36-install-sshd.sh; exit 0
+RUN cd /root/linux.feature/script/centos7/; sh 05.1-install-apache-ssl.sh; exit 0
 RUN yum clean all;rm -f /run/nologin
 
 ARG root_pass=zx234HgF77Kpsj
