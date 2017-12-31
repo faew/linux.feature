@@ -9,4 +9,5 @@ systemctl enable auditd
 systemctl start auditd
 
 sed -i "s/SELINUX=disabled/SELINUX=enforcing/g" /etc/selinux/config
+touch /.autorelabel
 reboot
