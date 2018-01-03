@@ -1,0 +1,24 @@
+# Copyright © 2018 Feature.su. All rights reserved. 
+# Licensed under the Apache License, Version 2.0 
+
+[sshd]
+enabled = true
+
+[lighttpd-badbots]
+enabled  = true
+port     = http,https
+logpath  = /var/log/lighttpd/access.log tail
+findtime = 60
+bantime  = 3600
+maxretry = 1
+
+# block of IP on 1 week, after 3 retries block fail2ban
+
+[fail2ban]
+enabled = true
+logpath = /var/log/fail2ban.log
+# findtime: 1 day
+findtime = 86400
+# bantime: 1 week
+bantime = 604800
+maxretry = 3
