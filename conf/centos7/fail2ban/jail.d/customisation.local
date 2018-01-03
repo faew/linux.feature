@@ -4,6 +4,8 @@
 [sshd]
 enabled = true
 
+# tail - go to the end file, when start
+
 [lighttpd-badbots]
 enabled  = true
 port     = http,https
