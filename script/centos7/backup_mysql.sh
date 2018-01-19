@@ -3,7 +3,7 @@
 
 sqluser="root"
 sqlpass=`cat /etc/linux.feature/mysql-pwd`
-backup_dir="/backup/mysql"
+backup_dir="/var/backup/mysql"
 cdate=`date +%F`
 tdaydir="$backup_dir/$cdate"
 
