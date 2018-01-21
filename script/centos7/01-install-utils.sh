@@ -13,6 +13,7 @@ yum -y install supervisor
 yum -y install unzip
 yum -y install yum-utils
 yum -y install aspell-en
+yum -y install certbot
 
 mkdir /etc/linux.feature
 chmod 600 /etc/linux.feature
