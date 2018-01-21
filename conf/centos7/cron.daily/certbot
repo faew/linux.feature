@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/certbot renew -n --post-hook="systemctl reload httpd"
