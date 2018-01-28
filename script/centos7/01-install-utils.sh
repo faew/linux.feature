@@ -6,7 +6,7 @@ yum -y install psmisc
 yum -y install mc telnet nano
 yum -y install wget net-tools
 yum -y install bind-utils
-yum -y install rdiff-backup rsync
+yum -y install rdiff-backup rsync sshpass
 yum -y install policycoreutils-python setools
 yum -y install pwgen
 yum -y install supervisor
