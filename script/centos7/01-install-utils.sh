@@ -16,9 +16,9 @@ yum -y install aspell-en
 yum -y install certbot
 
 mkdir /etc/linux.feature
-chmod 600 /etc/linux.feature
+chmod 700 /etc/linux.feature
 chcon -t admin_home_t /etc/linux.feature
 
 mkdir /var/backup
-chmod 600 /var/backup
+chmod 700 /var/backup
 chcon -t admin_home_t /var/backup
