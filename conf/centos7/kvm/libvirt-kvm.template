@@ -1,0 +1,42 @@
+<domain type='kvm'>
+  <name>___NAME___</name>
+  <uuid>___UUID___</uuid>
+  <memory>4194304</memory>  
+  <currentMemory>4194304</currentMemory>
+  <vcpu>2</vcpu>
+  <os>
+    <type arch='x86_64'  machine='pc'>hvm</type>
+    <boot dev='cdrom'/>
+  </os>
+  <features>   <acpi/>  <apic/>  <pae/>   </features>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <devices>
+    <emulator>/usr/libexec/qemu-kvm</emulator>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw'/>
+      <source dev='/dev/kvmlibvirt/___NAME___'/>
+      <target dev='vda' bus='virtio'/>
+    </disk>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/iso/___NAME___.iso'/>
+      <target dev='hdc' bus='ide'/>
+      <readonly/>
+    </disk>
+    <interface type='direct'>
+      <mac address='___MAC___'/>
+      <source dev='eth0' mode='vepa'/>
+      <model type='virtio'/>
+    </interface>
+    <input type='mouse' bus='ps2'/>
+    <graphics type='spice' passwd='___PASS___' port='5901' autoport='no'>
+      <listen type='address' address='0.0.0.0'/>
+    </graphics>
+    <video>
+      <model type='cirrus' vram='9216' heads='1'/>
+    </video>
+  </devices>
+</domain>
