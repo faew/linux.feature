@@ -3,7 +3,7 @@
 
 if [ "`systemctl is-active libvirtd`" != "active" ]
 then
-yum -y install libvirt virt-top spice-server spice-protocol virt-install
+yum -y install libvirt virt-top spice-server spice-protocol virt-install qemu-kvm qemu-img
 systemctl enable libvirtd
 systemctl start libvirtd
 firewall-cmd --add-port=5901/tcp --permanent
