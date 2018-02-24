@@ -23,3 +23,5 @@ chcon -t admin_home_t /etc/linux.feature
 mkdir /var/backup
 chmod 700 /var/backup
 chcon -t admin_home_t /var/backup
+
+mkdir /iso/
