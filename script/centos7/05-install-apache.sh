@@ -14,6 +14,10 @@ echo "<Directory \"/var/www\">" > /etc/httpd/conf.d/allowoverride.conf
 echo "AllowOverride All" >> /etc/httpd/conf.d/allowoverride.conf
 echo "</Directory>" >> /etc/httpd/conf.d/allowoverride.conf
 
+echo "RemoteIPHeader X-Forwarded-For" > /etc/httpd/conf.d/remouteip.conf
+echo "RemoteIPInternalProxy 127.0.0.1" >> /etc/httpd/conf.d/remouteip.conf
+echo 'LogFormat "%a %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined' >> /etc/httpd/conf.d/remouteip.conf
+
 systemctl enable httpd
 systemctl start httpd
 
