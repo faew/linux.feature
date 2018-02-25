@@ -17,6 +17,9 @@ else
     chcon -R -t httpd_sys_rw_content_t /var/www/$1/html
     echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
+    PASS=`pwgen 12 1`
+    echo -n $PASS | passwd --stdin $1
+    echo -n $PASS
     else
     echo "Domain $1 exists";
     fi
