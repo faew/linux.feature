@@ -11,4 +11,5 @@ make
 make install
 echo 'extension=suhosin.so' > /etc/php.d/suhosin.ini
 echo 'suhosin.get.max_value_length  = 2048' >> /etc/php.d/suhosin.ini
+echo 'suhosin.request.max_varname_length = 128' >> /etc/php.d/suhosin.ini
 echo "Delete temp files /tmp/suhosin-0.9.38"
