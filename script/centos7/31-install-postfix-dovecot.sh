@@ -5,7 +5,7 @@
 # /etc/postfix/virtual - list map mail->user
 
 if [ ! -f /etc/postfix/mydomains.list ]; then
-    yum -y install postfix
+    yum -y install postfix
     sed -i "s/\#myhostname = host.domain.tld/myhostname = `hostname`/g" /etc/postfix/main.cf
     sed -i "s/inet_interfaces = localhost/inet_interfaces = all/g" /etc/postfix/main.cf
     sed -i "s/mydestination = \$myhostname, localhost.\$mydomain, localhost/mydestination = \$myhostname, localhost/g" /etc/postfix/main.cf
@@ -44,4 +44,3 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
 else
 echo "Warning: postfix already init" 
 fi
-    
