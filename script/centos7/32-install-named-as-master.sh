@@ -13,6 +13,7 @@ sed -i "s/allow-query/allow-recursion/g" /etc/named.conf
 
 systemctl enable named-chroot
 systemctl start named-chroot
+systemctl restart named-chroot
 
 firewall-cmd --permanent --zone=public --add-service=dns
 firewall-cmd --reload
