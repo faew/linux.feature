@@ -41,6 +41,12 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
     firewall-cmd --zone=public --permanent --add-service=smtp
     firewall-cmd --zone=public --permanent --add-service=imap
     firewall-cmd --reload
+    
+    echo "[postfix]" >>  /etc/fail2ban/jail.d/customisation.local
+    echo "enabled = true" >>  /etc/fail2ban/jail.d/customisation.local
+    echo "[dovecot]" >>  /etc/fail2ban/jail.d/customisation.local
+    echo "enabled = true" >>  /etc/fail2ban/jail.d/customisation.local
+    systemctl restart fail2ban
 else
 echo "Warning: postfix already init" 
 fi
