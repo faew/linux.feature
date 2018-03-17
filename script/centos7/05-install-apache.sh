@@ -23,6 +23,7 @@ systemctl start httpd
 
 setsebool -P httpd_can_sendmail on
 setsebool -P httpd_can_network_connect on
+setsebool -P httpd_sys_script_anon_write on
 
 sh add-www-user.sh empty.local
 
