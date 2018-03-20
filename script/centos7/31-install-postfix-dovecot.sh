@@ -25,6 +25,7 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
     postmap /etc/postfix/virtual
     echo "virtual_alias_domains = /etc/postfix/mydomains.list" >> /etc/postfix/main.cf
     echo "virtual_alias_maps = hash:/etc/postfix/virtual" >> /etc/postfix/main.cf
+    sed -i "s/#smtps/smtps/g" /etc/postfix/master.cf
     systemctl restart postfix
     systemctl enable postfix
     
@@ -39,7 +40,8 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
     systemctl enable dovecot
     
     firewall-cmd --zone=public --permanent --add-service=smtp
-    firewall-cmd --zone=public --permanent --add-service=imap
+    firewall-cmd --zone=public --permanent --add-service=smtps
+    firewall-cmd --zone=public --permanent --add-service=imaps
     firewall-cmd --reload
     
     echo "[postfix]" >>  /etc/fail2ban/jail.d/customisation.local
