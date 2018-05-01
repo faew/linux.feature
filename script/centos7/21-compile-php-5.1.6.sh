@@ -15,7 +15,7 @@ export PHP_AUTOCONF=/usr/bin/autoconf-2.13
 cd /tmp
 wget http://museum.php.net/php5/php-5.1.6.tar.gz
 tar -xvzf ./php-5.1.6.tar.gz
-wget https://download.suhosin.org/suhosin-patch-5.1.6-0.9.6.patch.gz
+wget --no-check-certificate https://download.suhosin.org/suhosin-patch-5.1.6-0.9.6.patch.gz
 gunzip suhosin-patch-5.1.6-0.9.6.patch.gz
 wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/php51-openssl1.patch
 wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/php51-libxml2.patch
