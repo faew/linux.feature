@@ -13,7 +13,7 @@ yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-d
 cd /tmp
 wget http://museum.php.net/php4/php-4.4.9.tar.gz
 tar -xvzf ./php-4.4.9.tar.gz
-wget https://download.suhosin.org/suhosin-patch-4.4.9-0.9.6.patch.gz
+wget --no-check-certificate https://download.suhosin.org/suhosin-patch-4.4.9-0.9.6.patch.gz
 wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/php5-gmp.patch
 gunzip suhosin-patch-4.4.9-0.9.6.patch.gz
 patch -p0 < ./suhosin-patch-4.4.9-0.9.6.patch
