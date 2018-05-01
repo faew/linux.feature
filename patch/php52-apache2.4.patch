@@ -1,0 +1,20 @@
+--- sapi/apache2handler/php_functions.c 2010-01-03 12:23:27.000000000 +0300
++++ sapi/apache2handler/php_functions.c 2018-05-01 20:26:35.612906741 +0300
+@@ -383,7 +383,7 @@
+        char *p;
+        server_rec *serv = ((php_struct *) SG(server_context))->r->server;
+ #if !defined(WIN32) && !defined(WINNT) && !defined(NETWARE)
+-       AP_DECLARE_DATA extern unixd_config_rec unixd_config;
++       AP_DECLARE_DATA extern unixd_config_rec ap_unixd_config;
+ #endif
+
+        for (n = 0; ap_loaded_modules[n]; ++n) {
+@@ -414,7 +414,7 @@
+        php_info_print_table_row(2, "Hostname:Port", tmp);
+
+ #if !defined(WIN32) && !defined(WINNT) && !defined(NETWARE)
+-       snprintf(tmp, sizeof(tmp), "%s(%d)/%d", unixd_config.user_name, unixd_config.user_id, unixd_config.group_id);
++       snprintf(tmp, sizeof(tmp), "%s(%d)/%d", ap_unixd_config.user_name, ap_unixd_config.user_id, ap_unixd_config.group_id);
+        php_info_print_table_row(2, "User/Group", tmp);
+ #endif
+
