@@ -12,7 +12,7 @@ yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-d
 cd /tmp
 wget -O php-5.3.29.tar.gz http://php.net/get/php-5.3.29.tar.gz/from/this/mirror
 tar -xvzf ./php-5.3.29.tar.gz
-wget https://download.suhosin.org/suhosin-patch-5.3.9-0.9.10.patch.gz
+wget --no-check-certificate https://download.suhosin.org/suhosin-patch-5.3.9-0.9.10.patch.gz
 gunzip suhosin-patch-5.3.9-0.9.10.patch.gz
 sed -i "s/1997-2004/1997-2014/g" suhosin-patch-5.3.9-0.9.10.patch
 sed -i "s/1997-2011/1997-2014/g" suhosin-patch-5.3.9-0.9.10.patch
