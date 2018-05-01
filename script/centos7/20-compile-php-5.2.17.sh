@@ -13,7 +13,7 @@ cd /tmp
 wget http://museum.php.net/php5/php-5.2.17.tar.gz
 tar -xvzf ./php-5.2.17.tar.gz
 mv php-5.2.17 php-5.2.16
-wget https://download.suhosin.org/suhosin-patch-5.2.16-0.9.7.patch.gz
+wget --no-check-certificate https://download.suhosin.org/suhosin-patch-5.2.16-0.9.7.patch.gz
 gunzip suhosin-patch-5.2.16-0.9.7.patch.gz
 patch -p0 < ./suhosin-patch-5.2.16-0.9.7.patch
 mv php-5.2.16 php-5.2.17
