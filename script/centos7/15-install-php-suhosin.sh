@@ -2,7 +2,7 @@
 # Licensed under the Apache License, Version 2.0
 
 cd /tmp
-wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
+wget --no-check-certificate https://download.suhosin.org/suhosin-0.9.38.tar.gz
 tar -xvzf ./suhosin-0.9.38.tar.gz
 cd suhosin-0.9.38
 phpize
