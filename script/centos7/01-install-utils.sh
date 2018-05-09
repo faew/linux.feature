@@ -10,7 +10,7 @@ yum -y install rdiff-backup rsync sshpass sshfs
 yum -y install policycoreutils-python setools
 yum -y install pwgen
 yum -y install supervisor
-yum -y install unzip
+yum -y install unzip p7zip
 yum -y install yum-utils
 yum -y install aspell-en
 yum -y install certbot
