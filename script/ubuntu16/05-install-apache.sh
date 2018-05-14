@@ -8,6 +8,7 @@ a2enmod mpm_prefork
 a2enmod mpm_itk
 a2enmod php7.0
 a2enmod macro
+a2enmod rewrite
 
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --reload
