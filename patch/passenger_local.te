@@ -1,4 +1,4 @@
-module passenger 1.0;
+module passenger_local 1.0;
 
 require {
  type httpd_t;
