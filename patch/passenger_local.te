@@ -7,9 +7,11 @@ require {
  class file write;
  class dir write;
  class fifo_file { create read getattr setattr unlink write open append ioctl };
+ class capability2 block_suspend;    
 }
 
 #============= httpd_t ==============
 allow httpd_t cert_t:file write;
 allow httpd_t cert_t:dir write;
 allow httpd_t httpd_tmp_t:fifo_file {create read getattr setattr unlink write open append ioctl};
+allow httpd_t self:capability2 block_suspend; 
