@@ -12,4 +12,4 @@ require {
 #============= httpd_t ==============
 allow httpd_t cert_t:file write;
 allow httpd_t cert_t:dir write;
-allow httpd_t httpd_tmp_t:fifo_file {create getattr setattr unlink };;
+allow httpd_t httpd_tmp_t:fifo_file {create getattr setattr unlink };
