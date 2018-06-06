@@ -6,10 +6,10 @@ require {
  type httpd_tmp_t;
  class file write;
  class dir write;
- class fifo_file { create write };
+ class fifo_file { create getattr setattr unlink write };
 }
 
 #============= httpd_t ==============
 allow httpd_t cert_t:file write;
 allow httpd_t cert_t:dir write;
-allow httpd_t httpd_tmp_t:fifo_file create;
+allow httpd_t httpd_tmp_t:fifo_file {create getattr setattr unlink };;
