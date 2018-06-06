@@ -3,6 +3,7 @@ module passenger_local 1.0;
 require {
  type httpd_t;
  type cert_t;
+ type httpd_tmp_t;
  class file write;
  class dir write;
  class fifo_file { create write };
