@@ -1,0 +1,12 @@
+module passenger 1.0;
+
+require {
+ type httpd_t;
+ type cert_t;
+ class file write;
+ class dir write;
+}
+
+#============= httpd_t ==============
+allow httpd_t cert_t:file write;
+allow httpd_t cert_t:dir write;
