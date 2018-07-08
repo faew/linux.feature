@@ -15,6 +15,7 @@ yum -y install yum-utils
 yum -y install aspell-en
 yum -y install certbot
 yum -y install smartmontools dmidecode lm_sensors
+yum -y install p7zip
 
 mkdir /etc/linux.feature
 chmod 700 /etc/linux.feature
