@@ -8,3 +8,4 @@ apt-get -y install rdiff-backup rsync sshpass sshfs
 apt-get -y install pwgen
 apt-get -y install supervisor
 apt-get -y install unzip
+apt-get -y install anacron
