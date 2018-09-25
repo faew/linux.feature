@@ -30,3 +30,4 @@ virsh autostart $1
 echo "Open spice from client"
 cat /etc/libvirt/qemu/$1.xml | grep "<graphics"
 echo ""
+echo "Download spice client https://virt-manager.org/download/"
