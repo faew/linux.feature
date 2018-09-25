@@ -9,7 +9,7 @@ yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
 yum -y install openldap-devel aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel re2c recode-devel lhttpd-devel libxslt-devel mhash-devel ImageMagick-devel
 
 cd /tmp
-wget -O php-7.1.tar.gz http://php.net/get/php-7.1.14.tar.gz/from/this/mirror
+wget -O php-7.1.tar.gz http://php.net/get/php-7.1.22.tar.gz/from/this/mirror
 tar -xvzf ./php-7.1.tar.gz
 cd php-7.1.*
 cd ext
