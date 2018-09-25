@@ -8,10 +8,10 @@ else
  if ! [ -d /var/www/$1 ]
  then
  useradd -d /var/www/$1 $1
- mkdir -p /var/www/$1/html/web
+ mkdir -p /var/www/$1/project/html/web
  mkdir -p /var/www/$1/tmp
  chown -R $1:$1 /var/www/$1
- chmod 750 /var/www/$1/html
+ chmod 750 /var/www/$1/project/html
  chmod 750 /var/www/$1/tmp
  echo "Use VHost $1" >> /etc/apache2/sites-available/$1.conf
  a2ensite $1
