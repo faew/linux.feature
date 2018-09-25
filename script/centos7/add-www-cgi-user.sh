@@ -8,18 +8,18 @@ else
     if ! [ -d /var/www/$1 ]
     then
     useradd -d /var/www/$1 $1
-    mkdir -p /var/www/$1/html/web
+    mkdir -p /var/www/$1/project/html/web
     mkdir -p /var/www/$1/tmp
     mkdir -p /var/www/$1/php-cgi
     echo "#!/usr/bin/php-cgi" > /var/www/$1/php-cgi/php
     chown -R $1:$1 /var/www/$1
-    chmod 750 /var/www/$1/html
+    chmod 750 /var/www/$1/project/html
     chmod 750 /var/www/$1/tmp
     chmod 750 /var/www/$1/php-cgi
     chmod 700 /var/www/$1/php-cgi/php
     chcon -t httpd_sys_script_exec_t /var/www/$1/php-cgi/php
     chcon -R -t tmp_t /var/www/$1/tmp
-    chcon -R -t httpd_sys_rw_content_t /var/www/$1/html
+    chcon -R -t httpd_sys_rw_content_t /var/www/$1/project/html
     echo "Use VHostPhpCgi $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     PASS=`pwgen 12 1`
