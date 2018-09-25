@@ -8,13 +8,13 @@ else
     if ! [ -d /var/www/$1 ]
     then
     useradd -d /var/www/$1 $1
-    mkdir -p /var/www/$1/html/web
+    mkdir -p /var/www/$1/project/html/web
     mkdir -p /var/www/$1/tmp
     chown -R $1:$1 /var/www/$1
-    chmod 750 /var/www/$1/html
+    chmod 750 /var/www/$1/project
     chmod 750 /var/www/$1/tmp
     chcon -R -t tmp_t /var/www/$1/tmp
-    chcon -R -t httpd_sys_rw_content_t /var/www/$1/html
+    chcon -R -t httpd_sys_rw_content_t /var/www/$1/project
     echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     PASS=`pwgen 12 1`
