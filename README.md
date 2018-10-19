@@ -22,6 +22,7 @@ Manage you server with small shell scripts.
     
 #### Add into /etc/wgetrc
 
+    use_proxy = on
     http_proxy=http://login:password@ip:port
     https_proxy=http://login:password@ip:port
     ftp_proxy=http://login:password@ip:port
