@@ -3,7 +3,8 @@
 
 if [ "`systemctl is-active mysqld`" != "active" ]
 then
-rpm -i http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+wget -O /tmp/mysql57-community-release-el7-9.noarch.rpm http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+rpm -i /tmp/mysql57-community-release-el7-9.noarch.rpm
 yum -y install mysql-server mysql-community-libs-compat
 systemctl enable mysqld
 
@@ -19,7 +20,7 @@ MYSQL=`pwgen -y 12 1`
 
 echo -n $MYSQL > /etc/linux.feature/mysql-pwd
 
-mysql --connect-expired-password -u root -p`cat /var/log/messages /var/log/mysqld.log | grep "password is generated" | tail -n 1 | awk {'print $NF'}` <<_EOF_
+mysql --connect-expired-password -u root -p`cat /var/log/mysqld.log | grep "password is generated" | tail -n 1 | awk {'print $NF'}` <<_EOF_
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL';
 FLUSH PRIVILEGES;
 _EOF_
