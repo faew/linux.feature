@@ -16,6 +16,7 @@ yum -y install aspell-en
 yum -y install certbot
 yum -y install smartmontools dmidecode lm_sensors
 yum -y install python-pip
+yum -y install deltarpm
 
 mkdir /etc/linux.feature
 chmod 700 /etc/linux.feature
