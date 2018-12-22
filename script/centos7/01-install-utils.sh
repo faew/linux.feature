@@ -5,7 +5,7 @@ yum -y install epel-release
 yum -y install psmisc
 yum -y install mc telnet nano traceroute
 yum -y install wget net-tools
-yum -y install bind-utils ntpdate
+yum -y install bind-utils ntpdate dstat
 yum -y install rdiff-backup rsync sshpass sshfs
 yum -y install policycoreutils-python setools
 yum -y install pwgen
