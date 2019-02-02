@@ -4,5 +4,6 @@
 cd /usr/local/bin
 wget https://getcomposer.org/download/1.7.3/composer.phar
 chmod 755 composer.phar
+mv composer.phar composer
 cd /tmp
-echo "Exec: /usr/local/php71/bin/php /usr/local/bin/composer.phar"
+echo "Exec: composer"
