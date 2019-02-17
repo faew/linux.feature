@@ -6,6 +6,7 @@ sh 02-install-chrony.sh
 sh 03-enable-firewall.sh
 sh 04-install-fail2ban.sh
 sh 05-install-apache.sh
+sh 05.1-install-apache-ssl.sh
 sh 06-install-devel.sh
 sh 08-install-mysql.sh
 sh 30-compile-icu.sh
