@@ -19,6 +19,9 @@ yum -y install python-pip
 yum -y install deltarpm
 yum -y install sysstat
 
+systemctl enable sysstat
+systemctl start sysstat
+
 mkdir /etc/linux.feature
 chmod 700 /etc/linux.feature
 chcon -t admin_home_t /etc/linux.feature
