@@ -17,6 +17,7 @@ yum -y install certbot
 yum -y install smartmontools dmidecode lm_sensors
 yum -y install python-pip
 yum -y install deltarpm
+yum -y install sysstat
 
 mkdir /etc/linux.feature
 chmod 700 /etc/linux.feature
