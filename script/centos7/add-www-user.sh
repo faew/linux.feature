@@ -15,7 +15,7 @@ else
     chmod 750 /var/www/$1/tmp
     chcon -R -t tmp_t /var/www/$1/tmp
     chcon -R -t httpd_sys_rw_content_t /var/www/$1/project
-    echo "Use VHost $1" >> /etc/httpd/conf.modules.d/11-domains.conf
+    echo "Use VHost $1 $1 html/web" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     PASS=`pwgen 12 1`
     echo -n $PASS | passwd --stdin $1
