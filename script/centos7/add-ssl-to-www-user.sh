@@ -8,7 +8,7 @@ else
     if [ -d /var/www/$1 ]
     then
     /usr/bin/certbot certonly --webroot -d $1 --webroot-path /var/www/$1/project/html/web
-    echo "Use VHostSSLetsencrypt $1" >> /etc/httpd/conf.modules.d/11-domains.conf
+    echo "Use VHostSSLetsencrypt $1 $1 html/web" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     else
     echo "Domain $1 NOT exists";
