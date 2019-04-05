@@ -14,7 +14,8 @@ gem update --system
 gem update
 
 gem install rails
-gem install passenger
+gem install bundler
+gem install passenger -v 5.3.7
 
 ruby -v
 
