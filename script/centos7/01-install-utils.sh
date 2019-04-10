@@ -18,6 +18,7 @@ yum -y install smartmontools dmidecode lm_sensors
 yum -y install python-pip
 yum -y install deltarpm
 yum -y install sysstat
+yum -y install ffmpeg
 
 systemctl enable sysstat
 systemctl start sysstat
