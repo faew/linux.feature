@@ -19,6 +19,7 @@ yum -y install python-pip
 yum -y install deltarpm
 yum -y install sysstat
 yum -y install ffmpeg
+yum -y install p7zip
 
 systemctl enable sysstat
 systemctl start sysstat
