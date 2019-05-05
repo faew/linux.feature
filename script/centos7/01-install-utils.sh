@@ -18,8 +18,11 @@ yum -y install smartmontools dmidecode lm_sensors
 yum -y install python-pip
 yum -y install deltarpm
 yum -y install sysstat
+
+cd /tmp
+wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+rpm -Uvh /tmp/nux-dextop-release-0-5.el7.nux.noarch.rpm
 yum -y install ffmpeg
-yum -y install p7zip
 
 systemctl enable sysstat
 systemctl start sysstat
