@@ -9,7 +9,7 @@ yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
 yum -y install openldap-devel aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel re2c recode-devel lhttpd-devel libxslt-devel mhash-devel ImageMagick-devel
 
 cd /tmp
-wget -O php-7.1.tar.gz http://php.net/get/php-7.1.24.tar.gz/from/this/mirror
+wget -O php-7.1.tar.gz http://php.net/get/php-7.1.29.tar.gz/from/this/mirror
 tar -xvzf ./php-7.1.tar.gz
 cd php-7.1.*
 cd ext
@@ -33,7 +33,7 @@ sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 20M/g" /usr/local/php71
 sed -i "s/post_max_size = 8M/post_max_size = 20M/g" /usr/local/php71/etc/php.ini 
 sed -i "s/;date.timezone =/date.timezone = UTC/g" /usr/local/php71/etc/php.ini 
 
-sed -i "s/5/7/g" /etc/httpd/conf.modules.d/10-php.conf
+mv /etc/httpd/conf.modules.d/10-php.conf /etc/httpd/conf.modules.d/10-php.conf.disable
 systemctl restart httpd
 
 setsebool -P httpd_execmem on
