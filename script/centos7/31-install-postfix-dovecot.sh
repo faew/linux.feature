@@ -3,6 +3,7 @@
 
 # /etc/postfix/mydomains.list - list mail domains
 # /etc/postfix/virtual - list map mail->user
+# postmap /etc/postfix/virtual
 
 if [ ! -f /etc/postfix/mydomains.list ]; then
     yum -y install postfix
@@ -44,10 +45,10 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
     firewall-cmd --zone=public --permanent --add-service=imaps
     firewall-cmd --reload
     
-    echo "[postfix]" >>  /etc/fail2ban/jail.d/customisation.local
-    echo "enabled = true" >>  /etc/fail2ban/jail.d/customisation.local
-    echo "[dovecot]" >>  /etc/fail2ban/jail.d/customisation.local
-    echo "enabled = true" >>  /etc/fail2ban/jail.d/customisation.local
+    echo "[postfix]" >> /etc/fail2ban/jail.d/customisation.local
+    echo "enabled = true" >> /etc/fail2ban/jail.d/customisation.local
+    echo "[dovecot]" >> /etc/fail2ban/jail.d/customisation.local
+    echo "enabled = true" >> /etc/fail2ban/jail.d/customisation.local
     systemctl restart fail2ban
 else
 echo "Warning: postfix already init" 
