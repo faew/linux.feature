@@ -13,6 +13,8 @@ wget -O /etc/rspamd/override.d/worker-proxy.inc https://raw.githubusercontent.co
 systemctl enable rspamd
 systemctl start rspamd
 
+sleep 10s
+
 chown _rspamd:postfix /var/run/rspamd
 chmod 750 /var/run/rspamd
 
