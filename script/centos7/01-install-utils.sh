@@ -18,6 +18,7 @@ yum -y install smartmontools dmidecode lm_sensors
 yum -y install python-pip
 yum -y install deltarpm
 yum -y install sysstat
+yum -y install linux-firmware microcode_ctl
 
 cd /tmp
 wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
