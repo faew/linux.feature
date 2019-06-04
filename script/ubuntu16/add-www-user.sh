@@ -11,9 +11,10 @@ else
  mkdir -p /var/www/$1/project/html/web
  mkdir -p /var/www/$1/tmp
  chown -R $1:$1 /var/www/$1
+ chmod 750 /var/www/$1
  chmod 750 /var/www/$1/project/html
  chmod 750 /var/www/$1/tmp
- echo "Use VHost $1" >> /etc/apache2/sites-available/$1.conf
+ echo "Use VHost $1 $1 html/web" >> /etc/apache2/sites-available/$1.conf
  a2ensite $1
  systemctl reload apache2
  PASS=`pwgen 12 1`
