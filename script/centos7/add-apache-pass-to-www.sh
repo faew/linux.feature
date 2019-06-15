@@ -11,7 +11,7 @@ else
     htpasswd -b -c /etc/httpd/htpasswd/$1 $2 $3
     chmod 600 /etc/httpd/htpasswd/$1
     chown $1:$1 /etc/httpd/htpasswd/$1
-    echo "Use VHostHtpasswd $1" >> /etc/httpd/conf.modules.d/11-domains.conf
+    echo "Use VHostHtpasswd $1 html/web" >> /etc/httpd/conf.modules.d/11-domains.conf
     systemctl reload httpd
     else
     echo "Domain $1 NOT exists";
