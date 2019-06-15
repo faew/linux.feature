@@ -9,20 +9,20 @@ else
     then
         if ! [ -d /var/www/$1/html/web/import ]
         then
-        mkdir -p /var/www/$1/html/web/import
-        chown -R $1:$1 /var/www/$1/html/web/import
+        mkdir -p /var/www/$1/project/html/web/import
+        chown -R $1:$1 /var/www/$1/project/html/web/import
         useradd -s /sbin/nologin import.$1
-        mkdir -p /home/import.$1/import/
+        mkdir -p /home/import.$1/project/import/
         chown -R import.$1:import.$1 /home/import.$1/import/
         chcon -R -t httpd_sys_rw_content_t /home/import.$1/import/
         echo "" >> /etc/fstab
-        echo "/home/import.$1/import/    /var/www/$1/html/web/import    none    bind" >> /etc/fstab
+        echo "/home/import.$1/import/    /var/www/$1/project/html/web/import    none    bind" >> /etc/fstab
         mount -a
         PASS=`pwgen 12 1`
         echo -n $PASS | passwd --stdin import.$1
         echo -n $PASS
         else
-        echo "Folder domain /var/www/$1/html/web/import exists";
+        echo "Folder domain /var/www/$1/project/html/web/import exists";
         fi
     else
     echo "Main domain $1 NOT exists";
