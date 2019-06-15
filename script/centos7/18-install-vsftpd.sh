@@ -1,6 +1,8 @@
 # Copyright © 2017 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
+if [ "`systemctl is-active vsftpd`" != "active" ]
+then
 yum -y install vsftpd
 sed -i "s/anonymous_enable=YES/anonymous_enable=NO/g" /etc/vsftpd/vsftpd.conf
 sed -i "s/#chroot_local_user=YES/chroot_local_user=YES/g" /etc/vsftpd/vsftpd.conf
@@ -23,3 +25,12 @@ setsebool -P ftpd_use_passive_mode on
 systemctl enable vsftpd
 systemctl start vsftpd
 
+echo "" >> /etc/fail2ban/jail.d/customisation.local
+echo "[vsftpd]" >> /etc/fail2ban/jail.d/customisation.local
+echo "enabled = true" >> /etc/fail2ban/jail.d/customisation.local
+echo "logpath = %(syslog_authpriv)s" >> /etc/fail2ban/jail.d/customisation.local
+systemctl restart fail2ban
+
+else
+echo "Warning: vsftpd already install"
+fi
