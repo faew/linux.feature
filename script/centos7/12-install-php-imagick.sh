@@ -2,5 +2,5 @@
 # Licensed under the Apache License, Version 2.0
 
 yum -y install ImageMagick-devel
-echo "" | pecl install imagick-3.4.1
+echo "" | pecl install imagick-3.4.4
 echo 'extension=imagick.so' > /etc/php.d/imagick.ini
