@@ -8,6 +8,8 @@ yum -y install audit audit-libs
 systemctl enable auditd
 systemctl start auditd
 
+if [ "`getenforce`" != "Enforcing" ]; then
 sed -i "s/SELINUX=disabled/SELINUX=enforcing/g" /etc/selinux/config
 touch /.autorelabel
 reboot
+fi
