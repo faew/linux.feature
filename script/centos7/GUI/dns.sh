@@ -56,7 +56,7 @@ exitstatus=$?
             fi
         ;;
         LIST|DELETE)
-        DOMAINS=$(cat /etc/named.conf | grep "zone " | grep "{" | grep "};" )
+        DOMAINS=$(cat /etc/named.conf | grep "zone " | grep "{" | grep "};" | sort)
         if [ "$DOMAINS" = "" ]; then
             whiptail --fb --msgbox "No existing domains" 20 50
             exit
