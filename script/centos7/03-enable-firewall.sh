@@ -5,7 +5,7 @@ if [ "`systemctl is-active firewalld`" != "active" ]
 then
 yum -y install firewalld
 systemctl start firewalld
-firewall-cmd --zone=public --change-interface=`basename -a /sys/class/net/* | grep -v lo | tail -n 1`
+firewall-cmd --zone=public --change-interface=`route -n | grep -e "^0.0.0.0" | tail -n 1 | awk '{print $NF}'`
 firewall-cmd --reload
 systemctl enable firewalld
 else
