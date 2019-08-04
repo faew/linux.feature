@@ -15,7 +15,7 @@ fi
 
 if ! [ -f /iso/$1.iso ]
 then
-echo "Create data start iso for vps: wget -O /iso/$1.iso http://mirror.yandex.ru/centos/7.4.1708/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso"
+echo "Create data start iso for vps: wget -O /iso/$1.iso http://mirror.yandex.ru/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso"
 exit 0;
 fi
 
@@ -24,6 +24,7 @@ sed -i "s/___NAME___/$1/g" /etc/libvirt/qemu/$1.xml
 sed -i "s/___UUID___/`uuidgen`/g" /etc/libvirt/qemu/$1.xml
 sed -i "s/___MAC___/52:54:$(dd if=/dev/urandom count=1 2>/dev/null | md5sum | sed 's/^\(..\)\(..\)\(..\)\(..\).*$/\1:\2:\3:\4/')/g" /etc/libvirt/qemu/$1.xml
 sed -i "s/___PASS___/`pwgen -A 15 1`/g" /etc/libvirt/qemu/$1.xml
+sed -i "s/eth0/`route -n | grep -e "^0.0.0.0" | tail -n 1 | awk '{print $NF}'`/g" /etc/libvirt/qemu/$1.xml
 virsh define /etc/libvirt/qemu/$1.xml
 virsh start $1
 virsh autostart $1
