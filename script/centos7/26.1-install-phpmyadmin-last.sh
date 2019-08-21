@@ -2,10 +2,10 @@
 # Licensed under the Apache License, Version 2.0
 
 cd /var/www/empty.local/project/html/web/
-wget https://files.phpmyadmin.net/phpMyAdmin/4.8.3/phpMyAdmin-4.8.3-english.tar.gz
-tar -xvzf ./phpMyAdmin-4.8.3-english.tar.gz
-rm -f ./phpMyAdmin-4.8.3-english.tar.gz
-mv phpMyAdmin-4.8.3-english pma-`pwgen -A 12 1`
+wget https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-english.tar.gz
+tar -xvzf ./phpMyAdmin-4.8.5-english.tar.gz
+rm -f ./phpMyAdmin-4.8.5-english.tar.gz
+mv phpMyAdmin-4.8.5-english pma-`pwgen -A 12 1`
 cd pma-*
 rm -f -R setup
 cp config.sample.inc.php config.inc.php
