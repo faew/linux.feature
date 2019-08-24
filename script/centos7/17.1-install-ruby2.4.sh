@@ -13,7 +13,7 @@ yes | gem update --system
 yes | gem update
 
 gem install rails  -v 4.2.11
-gem install bundler
+gem install bundler -v 1.17.3
 
 ruby -v
 
