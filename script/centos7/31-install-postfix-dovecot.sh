@@ -43,6 +43,7 @@ if [ ! -f /etc/postfix/mydomains.list ]; then
     firewall-cmd --zone=public --permanent --add-service=smtp
     firewall-cmd --zone=public --permanent --add-service=smtps
     firewall-cmd --zone=public --permanent --add-service=imaps
+    firewall-cmd --zone=public --permanent --add-service=pop3s
     firewall-cmd --reload
     
     echo "[postfix]" >> /etc/fail2ban/jail.d/customisation.local
