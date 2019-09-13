@@ -10,7 +10,10 @@ Manage you server with small shell scripts.
     yum install git mc wget unzip
     cd /root
     git clone https://github.com/faew/linux.feature.git
-    mc
+    cd ~/linux.feature/script/centos7/
+    sh init-LAMP.sh
+    sh add-www-user.sh example.com
+    sh add-mysql-user.sh firstdb
 
 ### Setup In CentOS 7 Internet via proxy
 
@@ -34,5 +37,7 @@ Manage you server with small shell scripts.
     unzip master.zip
     mv linux.feature-master linux.feature
     rm -f master.zip
+    cd ~/linux.feature/script/centos7/
+    sh init-LAMP.sh
 
 more information http://linux.feature.su/     
