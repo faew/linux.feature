@@ -7,6 +7,7 @@ yum -y install httpd httpd-itk php
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --reload
 sed -i "s/Listen 80/Listen 0.0.0.0:80/g" /etc/httpd/conf/httpd.conf
+echo "TraceEnable off" >> /etc/httpd/conf/httpd.conf
 sed -i "s/#LoadModule/LoadModule/g" /etc/httpd/conf.modules.d/00-mpm-itk.conf
 wget -O /etc/httpd/conf.modules.d/10-vhost.conf https://raw.githubusercontent.com/faew/linux.feature/master/conf/centos7/apache24/10-vhost.conf
 
