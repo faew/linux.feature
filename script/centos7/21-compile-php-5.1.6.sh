@@ -9,7 +9,7 @@ yum -y install libxslt-devel postgresql-devel mysql-devel  mhash-devel freetype-
 yum -y install libcurl-devel xorg-x11-proto-devel libX11-devel cyrus-sasl-devel libjpeg-devel openldap-devel
 yum -y install db4-devel expat-devel libidn-devel libXpm-devel httpd-devel gmp-devel ncurses-devel
 
-yum install autoconf213
+yum -y install autoconf213
 export PHP_AUTOCONF=/usr/bin/autoconf-2.13
 
 cd /tmp
