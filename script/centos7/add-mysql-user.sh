@@ -5,7 +5,8 @@ if [ -z $1  ]
 then
 echo "Usage for create mysql user: sh add-mysql-user.sh user_name_create_as_db_name"
 else
-UPASS=`pwgen -y 12 1`
+SPECIAL="()*^@#"
+UPASS=`pwgen 12 1`${SPECIAL:`shuf -i 0-5 -n 1`:1}
 
 mysql --silent -u root -h localhost -p`cat /etc/linux.feature/mysql-pwd`  -e "
 CREATE USER $1@'%' IDENTIFIED BY '$UPASS';
