@@ -16,7 +16,8 @@ echo "max_connections = 100" >> /etc/my.cnf
 
 systemctl start mysqld
 
-MYSQL=`pwgen -y 12 1`
+SPECIAL="()*^@#"
+MYSQL=`pwgen 12 1`${SPECIAL:`shuf -i 0-5 -n 1`:1}
 
 echo -n $MYSQL > /etc/linux.feature/mysql-pwd
 
