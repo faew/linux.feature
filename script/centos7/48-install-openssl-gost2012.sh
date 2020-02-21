@@ -3,6 +3,7 @@
 
 cd /tmp
 git clone https://github.com/faew/openssl-gost2012.git
+cd openssl-gost2012
 ./config shared --prefix=/usr/local/gost --openssldir=/usr/local/gost
 make all
 make install
