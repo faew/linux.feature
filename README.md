@@ -4,6 +4,10 @@ Manage you server with small shell scripts.
 
 ## How to start ?
 
+### CentOS 8 - Redy for use
+
+    cd ~/linux.feature/script/centos8/
+
 ### Install CentOS 7 Core (minimal edition)
 
     yum update
