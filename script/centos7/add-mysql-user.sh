@@ -17,3 +17,12 @@ FLUSH PRIVILEGES;
 " 2> /dev/null
 echo -n $UPASS
 fi
+
+if [ -f "$1.sql" ]; then
+    mysql -u root -h localhost -p`cat /etc/linux.feature/mysql-pwd` $1 < $1.sql
+fi
+
+if [ -f "$1.key" ]; then
+    UPASS=`cat $1.key | xargs`
+    mysql -u root -h localhost -p`cat /etc/linux.feature/mysql-pwd` mysql -e "UPDATE user SET authentication_string='$UPASS' where host='%' and user='$1';FLUSH PRIVILEGES;".
+fi
