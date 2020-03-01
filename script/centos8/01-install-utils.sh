@@ -5,7 +5,7 @@ yum -y install epel-release
 yum -y install psmisc
 yum -y install mc telnet nano traceroute
 yum -y install wget net-tools
-yum -y install bind-utils
+yum -y install bind-utils idn2
 yum -y install rsync sshpass
 yum -y install pwgen
 yum -y install supervisor
