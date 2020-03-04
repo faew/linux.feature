@@ -21,4 +21,6 @@ make
 make install
 echo "extension=imagick" > /etc/php.d/90-imagick.ini
 
+setsebool -P httpd_execmem on
+
 systemctl restart httpd
