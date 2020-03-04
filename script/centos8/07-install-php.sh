@@ -1,7 +1,7 @@
 # Copyright © 2020 Feature.su. All rights reserved.
 # Licensed under the Apache License, Version 2.0
 
-yum -y install php php-pdo php-mysqlnd php-pear php-devel php-soap php-xml php-gd php-dba php-mbstring php-pgsql php-posix php-bcmath php-intl php-json php-opcache
+yum -y install php php-zip php-pdo php-mysqlnd php-pear php-devel php-soap php-xml php-gd php-dba php-mbstring php-pgsql php-posix php-bcmath php-intl php-json php-opcache
 
 sed -i "s/short_open_tag = Off/short_open_tag = On/g" /etc/php.ini
 sed -i "s/expose_php = On/expose_php = Off/g" /etc/php.ini
