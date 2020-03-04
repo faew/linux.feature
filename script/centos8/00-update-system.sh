@@ -10,6 +10,7 @@ systemctl start auditd
 
 if [ "`getenforce`" != "Enforcing" ]; then
 sed -i "s/SELINUX=disabled/SELINUX=enforcing/g" /etc/selinux/config
+sed -i "s/SELINUX=permissive/SELINUX=enforcing/g" /etc/selinux/config
 touch /.autorelabel
 reboot
 fi
