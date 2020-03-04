@@ -48,6 +48,10 @@ setsebool -P domain_can_mmap_files on
 cd ~/linux.feature/script/centos8
 sh add-www-user.sh empty.local
 
+yum -y install postfix
+systemctl enable postfix
+systemctl start postfix
+
 else
 echo "Warning: httpd already install"
 fi
