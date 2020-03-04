@@ -15,7 +15,7 @@ rpm -i libreoffice6.3-6.3.5.2-2.x86_64.rpm
 rpm -i libobasis6.3-writer-6.3.5.2-2.x86_64.rpm
 rpm -i libreoffice6.3-writer-6.3.5.2-2.x86_64.rpm
 rpm -i libobasis6.3-en-US-6.3.5.2-2.x86_64.rpm
-
+rpm -i libobasis6.3-graphicfilter-6.3.5.2-2.x86_64.rpm
 
 # Simple test conversion
 # echo "<b>test-writer.html</b> <i>test-writer.html</i>" > /tmp/test.html
