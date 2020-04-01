@@ -21,6 +21,7 @@ yum -y install chromium
 yum -y install dstat python3-pip
 yum -y install setools
 dnf -y --enablerepo=PowerTools install fuse-sshfs
+yum -y install GraphicsMagick
 
 systemctl enable sysstat
 systemctl start sysstat
