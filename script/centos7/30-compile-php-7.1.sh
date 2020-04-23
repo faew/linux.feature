@@ -6,7 +6,7 @@
 yum -y groupinstall "Development Tools"
 yum -y install httpd-devel
 yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
-yum -y install openldap-devel aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel re2c recode-devel lhttpd-devel libxslt-devel mhash-devel ImageMagick-devel
+yum -y install openldap-devel libwebp-devel aspell-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel re2c recode-devel lhttpd-devel libxslt-devel mhash-devel ImageMagick-devel
 
 cd /tmp
 wget -O php-7.1.tar.gz http://php.net/get/php-7.1.33.tar.gz/from/this/mirror
@@ -19,7 +19,7 @@ mv imagick-3.4.4 imagick
 cd ..
 rm -f configure
 ./buildconf --force
-./configure --prefix=/usr/local/php71 --with-ldap --with-libdir=lib64 --with-config-file-path=/usr/local/php71/etc --with-config-file-scan-dir=/usr/local/php71/etc/conf.d --with-apxs2 --enable-bcmath --with-bz2 --with-curl --enable-cgi --enable-filter --enable-pcntl --with-gd --with-mhash --enable-gd-native-ttf --with-freetype-dir --with-jpeg-dir --with-png-dir --enable-mbstring --with-mcrypt --enable-json --enable-mysqlnd --with-mysql-sock=/var/lib/mysql/mysql.sock --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-pdo-sqlite --disable-phpdbg --disable-phpdbg-webhelper --enable-opcache --with-openssl --enable-simplexml --with-xsl --with-sqlite3 --enable-xmlreader --enable-xmlwriter --enable-zip --enable-soap --with-zlib --with-imagick --enable-intl --with-icu-dir=/usr/local
+./configure --prefix=/usr/local/php71 --with-ldap --with-libdir=lib64 --with-config-file-path=/usr/local/php71/etc --with-config-file-scan-dir=/usr/local/php71/etc/conf.d --with-apxs2 --enable-bcmath --with-bz2 --with-curl --enable-cgi --enable-filter --enable-pcntl --with-gd --with-mhash --enable-gd-native-ttf --with-freetype-dir --with-jpeg-dir --with-png-dir --with-webp-dir --enable-mbstring --with-mcrypt --enable-json --enable-mysqlnd --with-mysql-sock=/var/lib/mysql/mysql.sock --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-pdo-sqlite --disable-phpdbg --disable-phpdbg-webhelper --enable-opcache --with-openssl --enable-simplexml --with-xsl --with-sqlite3 --enable-xmlreader --enable-xmlwriter --enable-zip --enable-soap --with-zlib --with-imagick --enable-intl --with-icu-dir=/usr/local
 make
 make install
 mkdir /usr/local/php71/etc/conf.d
