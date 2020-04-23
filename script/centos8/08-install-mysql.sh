@@ -3,8 +3,6 @@
 
 if [ "`systemctl is-active mysqld`" != "active" ]
 then
-wget -O /tmp/mysql80-community-release-el8-1.noarch.rpm http://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm
-rpm -i /tmp/mysql80-community-release-el8-1.noarch.rpm
 yum -y install mysql-server
 systemctl enable mysqld
 
