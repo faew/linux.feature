@@ -3,8 +3,10 @@
 
 # Warning: disable --with-imagick in 30-compile-php-7.1.sh!  There is compile with new ImageMagick
 
+yum -y install libwebp-devel
+
 cd /tmp
-wget https://imagemagick.org/download/ImageMagick-6.9.11-7.tar.gz
+wget https://imagemagick.org/download/releases/ImageMagick-6.9.11-7.tar.gz
 tar -xvzf ./ImageMagick-6.9.11-7.tar.gz
 cd ImageMagick-6.9.11-7
 ./configure
