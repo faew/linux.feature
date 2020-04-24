@@ -4,9 +4,9 @@
 # Warning: disable --with-imagick in 30-compile-php-7.1.sh!  There is compile with new ImageMagick
 
 cd /tmp
-wget https://imagemagick.org/download/ImageMagick-7.0.10-7.tar.gz
-tar -xvzf ./ImageMagick-7.0.10-7.tar.gz
-cd ImageMagick-7.0.10-7
+wget https://imagemagick.org/download/ImageMagick-6.9.11-7.tar.gz
+tar -xvzf ./ImageMagick-6.9.11-7.tar.gz
+cd ImageMagick-6.9.11-7
 ./configure
 make
 make install
