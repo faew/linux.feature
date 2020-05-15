@@ -23,4 +23,7 @@ echo "extension=imagick" > /etc/php.d/90-imagick.ini
 
 setsebool -P httpd_execmem on
 
+systemctl stop php-fpm
+systemctl disable php-fpm
+
 systemctl restart httpd
