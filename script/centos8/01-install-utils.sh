@@ -12,7 +12,6 @@ yum -y install supervisor
 yum -y install unzip p7zip
 yum -y install yum-utils
 yum -y install aspell-en
-yum -y install certbot
 yum -y install smartmontools dmidecode lm_sensors
 yum -y install sysstat htop
 yum -y install linux-firmware microcode_ctl
@@ -20,7 +19,7 @@ yum -y install pngquant optipng
 yum -y install chromium
 yum -y install dstat python3-pip
 yum -y install setools
-dnf -y --enablerepo=PowerTools install fuse-sshfs
+dnf -y --enablerepo=PowerTools install fuse-sshfs certbot
 yum -y install GraphicsMagick
 
 systemctl enable sysstat
