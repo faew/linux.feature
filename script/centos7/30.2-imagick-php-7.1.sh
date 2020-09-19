@@ -6,9 +6,9 @@
 yum -y install libwebp-devel
 
 cd /tmp
-wget https://imagemagick.org/download/releases/ImageMagick-6.9.11-7.tar.gz
-tar -xvzf ./ImageMagick-6.9.11-7.tar.gz
-cd ImageMagick-6.9.11-7
+wget https://imagemagick.org/download/releases/ImageMagick-6.9.11-29.tar.gz
+tar -xvzf ./ImageMagick-6.9.11-29.tar.gz
+cd ImageMagick-6.9.11-29
 ./configure
 make
 make install
