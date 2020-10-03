@@ -35,6 +35,7 @@ sed -i "s/expose_php = On/expose_php = Off/g" /usr/local/php71/etc/php.ini
 sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 20M/g" /usr/local/php71/etc/php.ini
 sed -i "s/post_max_size = 8M/post_max_size = 20M/g" /usr/local/php71/etc/php.ini
 sed -i "s/;date.timezone =/date.timezone = UTC/g" /usr/local/php71/etc/php.ini
+sed -i "s/;pcre.jit=1/pcre.jit=0/g" /usr/local/php71/etc/php.ini
 
 sed -i "/php5_module/ d" /etc/httpd/conf/httpd.conf
 systemctl reload httpd
