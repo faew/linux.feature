@@ -12,6 +12,7 @@ sh 06-install-devel.sh
 sh 08-install-mysql.sh
 sh 30-compile-icu.sh
 sh 30-compile-php-7.1.sh
+sh 30.2-imagick-php-7.1.sh
 sh 35-install-crond.sh
 sh 09-install-sphinx.sh
 sh 10-install-redis.sh
