@@ -18,7 +18,7 @@ echo -n $UPASS
 fi
 
 if [ -f "$1.sql" ]; then
-    mysql -u root -h localhost -p`cat /etc/linux.feature/mysql-pwd` $1 < $1.sql
+    mysql --init-command="SET SQL_LOG_BIN = 0;" -u root -h localhost -p`cat /etc/linux.feature/mysql-pwd` $1 < $1.sql
 fi
 
 if [ -f "$1.key" ]; then
