@@ -19,7 +19,7 @@ yum -y install pngquant optipng
 yum -y install chromium
 yum -y install dstat python3-pip
 yum -y install setools
-dnf -y --enablerepo=PowerTools install fuse-sshfs certbot
+dnf -y --enablerepo=powertools install fuse-sshfs certbot
 yum -y install GraphicsMagick
 
 systemctl enable sysstat
