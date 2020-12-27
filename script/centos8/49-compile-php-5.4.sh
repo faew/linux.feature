@@ -8,6 +8,9 @@ yum -y groupinstall "Development Tools"
 yum -y install httpd-devel
 yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
 yum -y install openldap-devel gmp-devel libXpm-devel libcurl-devel libicu-devel libmcrypt-devel libpng-devel libxml2-devel mysql-devel libxslt-devel mhash-devel ImageMagick-devel
+yum -y install mysql-devel libxslt-devel mhash-devel libmcrypt-devel libpng-devel libxml2-devel
+yum -y install libwebp-devel libjpeg-turbo-devel freetype-devel
+yum -y --enablerepo=powertools install ImageMagick-devel
 
 cd /tmp
 wget https://museum.php.net/php5/php-5.4.45.tar.gz
