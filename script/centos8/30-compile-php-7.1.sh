@@ -8,7 +8,7 @@ yum -y install httpd-devel
 yum -y install zlib-devel openssl-devel sqlite-devel bzip2-devel
 yum -y install openldap-devel libicu-devel libwebp-devel gmp-devel libXpm-devel libcurl-devel libicu-devel
 yum -y install mysql-devel libxslt-devel mhash-devel libmcrypt-devel libpng-devel libxml2-devel
-dnf -y --enablerepo=PowerTools install ImageMagick-devel
+dnf -y --enablerepo=powertools install ImageMagick-devel
 
 cd /tmp
 wget -O php-7.1.tar.gz http://php.net/get/php-7.1.33.tar.gz/from/this/mirror
