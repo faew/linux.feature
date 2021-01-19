@@ -29,7 +29,7 @@ cd mpm-itk-2.4.7-04
 make
 make install
 
-echo "LoadModule mpm_itk_module modules/mpm_itk.so" > /etc/httpd/conf.modules.d/00-mpm-itk.conf
+echo "LoadModule mpm_itk_module modules/mpm_itk.so" > /etc/httpd/conf.modules.d/01-mpm-itk.conf
 
 cd /tmp
 wget https://raw.githubusercontent.com/faew/linux.feature/master/patch/httpd_dac.te
